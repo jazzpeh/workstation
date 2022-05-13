@@ -378,5 +378,3 @@ nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim
 nnoremap <C-p> :lua require('telescope.builtin').git_files()<CR>
 nnoremap <Leader>pf :lua require('telescope.builtin').find_files()<CR>
 ```
-
-> Use vim to open up nvim by setting `alias vim="nvim"` in `~/.zshrc`
