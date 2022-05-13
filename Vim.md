@@ -19,6 +19,9 @@ mkdir -p ~/.config/nvim
 
 # Create nvim init file
 touch ~/.config/nvim/init.vim
+
+# Alias vim to nvim for zsh
+echo "alias vim='nvim'" >> ~/.zshrc
 ```
 
 ## Folder setup
