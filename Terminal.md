@@ -2,19 +2,10 @@
 
 ## Homebrew
 
-Install [homebre](https://brew.sh/)w if not already.
+Install [homebrew](https://brew.sh/)w if not already.
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-## iTerm2
-
-Install [iTerm2](https://iterm2.com/).
-
-```sh
-# via brew
-brew cask install iterm2
 ```
 
 ## Oh My Zsh
@@ -26,6 +17,15 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ```
 
 > Install zsh if not already `brew install zsh`
+
+## iTerm2
+
+Install [iTerm2](https://iterm2.com/).
+
+```sh
+# via brew
+brew cask install iterm2
+```
 
 ## Customisation
 
@@ -49,11 +49,13 @@ plugins=(
   web-search
   extract
   history
+  zsh-syntax-highlighting
 )
 
 # Source default oh-my-zsh script
 source $ZSH/oh-my-zsh.sh
-
-# Source zsh syntax zsh-syntax-highlighting plugin
-source /Users/jazzpeh/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ```
+
+## Installing Cobalt2 theme
+
+https://github.com/wesbos/Cobalt2-iterm
