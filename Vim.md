@@ -277,8 +277,8 @@ nnoremap <leader>ga :Git fetch --all<CR>
 nnoremap <leader>grum :Git rebase upstream/master<CR>
 nnoremap <leader>grom :Git rebase origin/master<CR>
 
-nmap <leader>gh :diffget //3<CR>
-nmap <leader>gu :diffget //2<CR>
+nmap <leader>gh :diffget 1<CR>
+nmap <leader>gl :diffget 3<CR>
 nmap <leader>gs :G<CR>
 ```
 
@@ -377,4 +377,21 @@ set shortmess+=c
 nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
 nnoremap <C-p> :lua require('telescope.builtin').git_files()<CR>
 nnoremap <Leader>pf :lua require('telescope.builtin').find_files()<CR>
+```
+
+## Using Neovim as Git mergetool
+
+```
+# ~/.gitconfig
+
+[difftool]
+    prompt = false
+[diff]
+    tool = nvimdiff
+[difftool "nvimdiff"]
+    cmd = "nvim -d \"$LOCAL\" \"$BASE\" \"$REMOTE\""
+[merge]
+    tool = nvimdiff
+[mergetool "nvimdiff"]
+    cmd = "nvim -d \"$LOCAL\" \"$BASE\" \"$REMOTE\""
 ```
