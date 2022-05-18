@@ -266,7 +266,7 @@ set background=dark
 highlight Normal guibg=none
 
 " Status line
-lua require('gruvbox_lualine')
+lua require('colors')
 
 ```
 
