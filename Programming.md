@@ -2,7 +2,7 @@
 
 ## NodeJS
 
-Install NodeJS via  [Node Version Manager]('https://github.com/nvm-sh/nvm').
+Install NodeJS via  [Node Version Manager](https://github.com/nvm-sh/nvm).
 
 ## Golang
 
