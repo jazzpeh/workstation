@@ -2,7 +2,7 @@
 
 ## Homebrew
 
-Install [homebrew](https://brew.sh/)w if not already.
+Install [homebrew](https://brew.sh/) if not already.
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
