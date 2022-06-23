@@ -277,8 +277,8 @@ nnoremap <leader>ga :Git fetch --all<CR>
 nnoremap <leader>grum :Git rebase upstream/master<CR>
 nnoremap <leader>grom :Git rebase origin/master<CR>
 
-nmap <leader>gh :diffget 1<CR>
-nmap <leader>gl :diffget 3<CR>
+nmap <leader>gh :diffget 2<CR>
+nmap <leader>gl :diffget 4<CR>
 nmap <leader>gs :G<CR>
 ```
 
@@ -384,14 +384,16 @@ nnoremap <Leader>pf :lua require('telescope.builtin').find_files()<CR>
 ```
 # ~/.gitconfig
 
-[difftool]
-    prompt = false
-[diff]
-    tool = nvimdiff
-[difftool "nvimdiff"]
-    cmd = "nvim -d \"$LOCAL\" \"$BASE\" \"$REMOTE\""
+# define command which will be used when "nvim" is set as a merge tool
+[mergetool "nvim"]
+    cmd = nvim -f -c \"Gvdiffsplit!\" \"$MERGED\"
+
+# set "nvim" as tool for merging
 [merge]
-    tool = nvimdiff
-[mergetool "nvimdiff"]
-    cmd = "nvim -d \"$LOCAL\" \"$BASE\" \"$REMOTE\""
+    tool = nvim
+
+# automatically launch merge tool without displaying a prompt
+[mergetool]
+   prompt = false
+
 ```
