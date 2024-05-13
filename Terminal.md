@@ -56,6 +56,8 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 ```
 
-## Installing Cobalt2 theme
+## Installing Snazzy theme
 
-https://github.com/wesbos/Cobalt2-iterm
+```bash
+(curl -Ls https://raw.githubusercontent.com/sindresorhus/iterm2-snazzy/main/Snazzy.itermcolors > /tmp/Snazzy.itermcolors && open /tmp/Snazzy.itermcolors)
+```
